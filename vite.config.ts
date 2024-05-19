@@ -7,5 +7,22 @@ export default defineConfig({
   },
   worker: {
     format: 'es',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'pixi.js': ['pixi.js'],
+        },
+      },
+    },
+  },
+  build: {
+    minify: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'pixi.js': ['pixi.js'],
+        },
+      },
+    },
   },
 });
